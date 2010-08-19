@@ -1,0 +1,5 @@
+This project aims to create an emulator for an imaginary computer called the Simpletron.
+The Simpletron understands only one language directly, namely the SML: Simpletron Machine Language.
+The emulator provides a loader that allows the user two load self-written SML programs into a Simpletron
+machine's memory. Once it is there, it can be executed. More information on how to write SML programs can be
+found in the SML_reference.txt file.
