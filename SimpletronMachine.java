@@ -42,6 +42,14 @@ public class SimpletronMachine
     System.out.println();
   }
   
+  // Send a reset signal to the CPU.
+  public void reset()
+  {
+    stProcessor.reset();
+  }
+  
+  // Do a full "computerdump", dump CPU register contents
+  // to screen, and print memory map.
   public void computerDump()
   {
     System.out.println();

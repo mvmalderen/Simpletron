@@ -11,6 +11,15 @@ A: word = opcode * 100 + operand.
  :            ==> Simpletron word = 11 * 100 + 15 = 1100 + 15 = 1115.
  :            ==> Meaning: Write the word from memory location 15 to the screen.
 
+Q: Can I make assumptions about the contents of a Simpletron's memory?
+A: Absolutely NOT! The only way to guarantee the contents of a memory slot is
+ : by explicitly writing a value to it. This can be done either by the loader or
+ : by your program itself.
+
+Q: How do I properly terminate my program?
+A: There's only one way to tell the CPU that your program is terminating, and that is
+ : by using a HALT instruction. Undefined behaviour occurs when you omit the use of HALT.
+
 instruction  |  opcode  |  operand |  description
 
 READ         |    10    |          |  Read a word from the keyboard into a specific location in memory.

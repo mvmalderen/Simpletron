@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class SimpletronProcessor
 {
+  // Constructor. Init all registers to zero, and take
+  // a reference to the memory where the CPU can find its
+  // instructions.
   public SimpletronProcessor(SimpletronMemory stMemory)
   {
     accumulator = 0;
@@ -152,6 +155,18 @@ public class SimpletronProcessor
       System.out.println("*** Simpletron execution abnormally terminated ***");
     
     return !halted;
+  }
+  
+  // Reset CPU registers and disable the halted and
+  // abnormalTermination flags.
+  public void reset()
+  {
+    accumulator = 0;
+    instructionCounter = 0;
+    operationCode = 0;
+    operand = 0;
+    halted = false;
+    abnormalTermination = false;
   }
   
   // Dump CPU register contents to screen.
