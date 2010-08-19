@@ -31,8 +31,8 @@ public class SimpletronProcessor
     if (abnormalTermination) return false;
         
     // Get opcode and operand.
-    operationCode = instructionRegister / 100;
-    operand = instructionRegister % 100;
+    operationCode = SimpletronWord.getOperationCode(instructionRegister);
+    operand = SimpletronWord.getOperand(instructionRegister);
     
     // We need to remember if a transfer-of-control has occurred.
     boolean transferOfControl = false;
